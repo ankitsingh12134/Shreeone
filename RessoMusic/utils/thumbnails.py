@@ -137,7 +137,7 @@ async def get_thumb(videoid):
             stroke_fill="black",
         )
 
-        stats_text = f"YouTube : {views} | Time : {duration} | Player : @Sukku_Music_Bot"
+        stats_text = f"YouTube : {views} | Time : {duration} | Player : @moonlight_musicRobot"
         w_stats = get_text_width(stats_text, font_details)
         draw.text(
             ((1280 - w_stats) / 2, text_y_pos + 70),
@@ -193,3 +193,14 @@ async def get_qthumb(vidid):
     except Exception as e:
         print(e)
         return YOUTUBE_IMG_URL
+# --- Compatibility aliases for old plugins ---
+
+# If gen_thumb exists, expose get_thumb
+try:
+    gen_thumb
+except NameError:
+    def gen_thumb(*args, **kwargs):
+        return None
+
+def get_thumb(*args, **kwargs):
+    return gen_thumb(*args, **kwargs)
