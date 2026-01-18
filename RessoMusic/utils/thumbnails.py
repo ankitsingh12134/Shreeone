@@ -259,3 +259,5 @@ async def gen_thumb(videoid: str):
         logging.error(f"Error generating thumbnail for video {videoid}: {e}")
         traceback.print_exc()
         return None
+def get_thumb(*args, **kwargs):
+    return gen_thumb(*args, **kwargs)
