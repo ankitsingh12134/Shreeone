@@ -1,3 +1,4 @@
+DISABLE_THUMBNAILS = True
 import os
 import re
 
@@ -193,7 +194,7 @@ async def get_qthumb(vidid):
     except Exception as e:
         print(e)
         return YOUTUBE_IMG_URL
-# --- Async compatibility helpers ---
+# --- FINAL SAFE thumbnail stubs ---
 
 async def gen_thumb(*args, **kwargs):
     return None
