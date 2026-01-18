@@ -258,13 +258,13 @@ class Call:
         )
 
     async def stream_call(self, link: str) -> None:
-        assistant = await group_assistant(self, config.LOGGER_ID)
+        assistant = await group_assistant(self, config.LOG_GROUP_ID)
         try:
             await assistant.play(config.LOGGER_ID, MediaStream(link))
             await asyncio.sleep(8)
         finally:
             try:
-                await assistant.leave_call(config.LOGGER_ID)
+                await assistant.leave_call(config.LOG_GROUP_ID)
             except:
                 pass
 
