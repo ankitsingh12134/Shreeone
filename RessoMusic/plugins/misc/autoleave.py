@@ -1,4 +1,4 @@
-import asyncio
+mv RessoMusic/plugins/misc/autoleave.py RessoMusic/plugins/misc/autoleave.py.disabledimport asyncio
 from pyrogram import filters
 from pyrogram.types import Message
 
