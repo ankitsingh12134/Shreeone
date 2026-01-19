@@ -1,4 +1,4 @@
-from pykeyboard import InlineKeyboard
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
